@@ -9,7 +9,7 @@
     
     <title>
         
-            新文章 |
+            react踩坑记 |
         
         yangbo
     </title>
@@ -73,6 +73,14 @@
                             </a>
                         </li>
                     
+                        <li class="menu-item">
+                            <a class=""
+                               href="/my-hexo-site/about"
+                            >
+                                ABOUT
+                            </a>
+                        </li>
+                    
                     
                 </ul>
             </div>
@@ -98,6 +106,11 @@
                        href="/my-hexo-site/archives">ARCHIVES</a>
                 </li>
             
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/my-hexo-site/about">ABOUT</a>
+                </li>
+            
         </ul>
     </div>
 
@@ -117,7 +130,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">新文章</span>
+            <span class="title-hover-animation">react踩坑记</span>
         </div>
 
         
@@ -135,9 +148,31 @@
                     <div class="meta-info">
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
-        <i class="fas fa-edit"></i>&nbsp;2018-04-12 14:43:09
+        <i class="fas fa-edit"></i>&nbsp;2018-06-08 14:43:09
     </span>
     
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/my-hexo-site/categories/%E5%89%8D%E7%AB%AF/">前端</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/my-hexo-site/tags/react/">react</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
     
 
     
@@ -152,7 +187,8 @@
         
 
         <div class="article-content markdown-body">
-            <p>这是一篇新文章,时间是 2018</p>
+            <h2 id="react踩坑记"><a href="#react踩坑记" class="headerlink" title="react踩坑记"></a>react踩坑记</h2><p>这几天的react项目耗尽了我许多精力<br>趁这会儿闲，讲一讲吧<br>首先是react组件：<br>说实话，因为是第一次接触，所以对组件的稍微高级点的应用都不会，全是看文档和视频学来的。<br>render props 和 高阶组件，性能优化相关的文档也都看了，有些甚至都用上了 最后发现不是很适合，又砍掉了。<br>本身我对布局是很有抵触心里的，没系统学过css,又不熟悉布局相关的知识，结果一开始根本没考虑布局，直到功能实现后才考虑布局相关的内容，然后就遇到了这个项目以来最大的坑。<br>semantic-ui。 之前做了一个小游戏，a dark room，用的ng2 布局就想到了semantic-ui 普通版。当时用着还不错，对我这种布局苦手来说，简便易用，上手就能搭。<br>然而这次的坑全在react-semantic-ui上<br>搜semantic-ui的时候，刚好发现了还有react版本，心想，还不错，直接拿来用，不用麻烦的打包一堆乱七八糟的css icon文件，还要翻墙。<br>结果第一个下马威就来了，semantic-ui只是样式框架，外面的骨架，高宽，滚动这些细枝末节的东西他可不管，想想也是，样式就是样式，顶多能控制行内属性和对齐排列这些，骨架怎么给你搭啊。<br>结果就是改了这行那行报错，这边用了这个ui组件，就不能加那个ui组件，来来回回，反反复复，光semantic-ui至少耽误了我5天的时间。<br>最后实在受不了了，全部替换，样式用flex-box全部重写<br>这才引出我想说的神器flex-box布局<br>起因是什么忘了，反正就是想到有一种布局叫flex-box，听说很NB，但具体是什么不清楚，网上搜了搜，果然阮一峰老师实乃前端劳模，flex他也讲过，得了，想到他一贯的细致清晰的讲解风格，决定以他的博客为主，开始学习flex-box<br>这了解不要紧，发现flex-box几乎是是全能王<br>不用position 不用bug超多的float 不用奇技淫巧便可获得所需的几乎任何排版位置，配合media，更是如虎添翼，布置响应式布局顺手拈来。当然这些都是我看的这么多flex项目看出来的，实际上我只会简单的排版，并不熟悉响应式布局。<br>现在的口袋豆瓣的全部样式就已经重写为flex布局了，即清爽又简洁，排错也简单，剩下的就是慢慢系统学习flex和相关的库了。<br>        又开始吐槽react，首先是错误提示不够友好，总会有一些无法定位的错误提示，只能说无法定位，提示个卵啊。<br>    还有就是render必须只有一个外层元素，有些时候没法灵活的处理组件，总感觉使用起来不爽。<br>    高阶组件看了，render props也看了 感觉没啥区别，只有单一的state控制render，效率太低…<br>    最后，react让人头疼就是数据处理，只要给到的数据不符合react的规则，他都会报一个莫名其妙的错误，然后还没法从堆栈中追溯,当时找这个bug花了不少精力。<br>    <img src="https://cdn.jsdelivr.net/gh/youngboo/image-hosting@master/20210414/aaa.28iw7ibivgro.png" alt="aaa"><br>不加的话，如果react没有获取到期望的值，就会报错，这个错误太难找了。</p>
+<p>再插一句webpack，这个是我比较重视的内容，首先要区分开发版配置和生产版配置，然后配置npm命令分别进行打包，现在只做了一个基础版，效果还不错，以后再加一个测试版。</p>
 
         </div>
 
@@ -196,7 +232,7 @@
         <div class="copyright-info info-item">
             &copy;
             
-              <span>2020</span>&nbsp;-&nbsp;
+              <span>2018</span>&nbsp;-&nbsp;
             
             2021&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">yangbo</a>
         </div>
