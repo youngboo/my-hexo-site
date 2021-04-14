@@ -104,3 +104,9 @@ theme: keep
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+# keep setting
+base_info:
+  title: yangbo
+  author: yangbo
+  url: https://youngboo.github.io/my-hexo-site
