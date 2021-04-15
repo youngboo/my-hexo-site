@@ -8,7 +8,7 @@ subtitle: 'yangbo-boke'
 description: '小博客'
 keywords:
 author: yang bo
-language: zh-hans
+language: zh-CN
 timezone: 'Asia/Shanghai'
 
 # URL
@@ -104,3 +104,13 @@ theme: keep
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+# 压缩文件
+all_minifier: true
+
+# 搜索
+search:
+  path: search.json
+  field: post
+  content: true
+  format: striptags
